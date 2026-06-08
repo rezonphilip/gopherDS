@@ -94,3 +94,24 @@ func TestRecursionExponent(base, exp int) {
 func TestRecursiveReverse(str string) {
 	fmt.Println(recursion.Reverse(str))
 }
+
+func TestRecursiveGCD(a, b int) {
+	fmt.Printf("The greatest common divisor of %d & %d is %d\n", a, b, recursion.GCD(a, b))
+}
+
+func TestRecursiveBinarySearch() {
+	testList := []int{1, 12, 23, 34, 65, 69, 77, 81, 93, 101}
+	target := 93
+	fmt.Printf("Test List: %v\n", testList)
+	fmt.Printf("Target : %v\n", target)
+	index := recursion.BinarySearch(testList, target, 0, len(testList)-1)
+	if index < 0 {
+		fmt.Println("not found")
+	} else {
+		fmt.Printf("Target found at %dth index\n", index)
+	}
+}
+
+func TestRecursiveDirectoryTraversal(path string) {
+	recursion.Walk(path)
+}

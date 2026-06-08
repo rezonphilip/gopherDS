@@ -1,5 +1,8 @@
-// package recursion
+package recursion
 
-// func GCD(a, b int) int {
-
-// }
+func GCD(a, b int) int {
+	if b == 0 {
+		return a
+	}
+	return GCD(b, a%b)
+}
